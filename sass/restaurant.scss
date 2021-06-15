@@ -1,0 +1,168 @@
+@import "couleur.scss";
+
+/* restaurants */
+
+#bloc_restaurant{
+    width: 100%;
+    height: 1183px;
+    background-color: #f6f6f6;
+
+
+    h2{
+        padding-top: 27px;
+        padding-left: 17px;
+    }
+
+    .bloc_image{
+        width: 271px ;
+        height:250px ;
+        
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+        border-radius: 15px;
+        box-shadow: 1px 2px 12px grey;
+    }
+
+    .image{
+        width: 271px;
+        height: 176px;
+        object-fit: cover;
+        border-radius: 15px 15px 0px 0px;
+    }
+
+    h3{
+        padding-left: 10px;
+        margin-top: 3px;
+        margin-bottom: 0px;
+    }
+
+    p{
+        padding-left: 10px;
+        margin-top: 3px;
+    }
+
+    .coeur_1{
+        margin-left: 123px;
+        
+    }
+
+    .coeur_2{
+        margin-left: 153px;
+        position: relative;
+    }
+
+    .coeur_3{
+        margin-left: 148px;
+        
+    }
+
+    .coeur_4{
+        margin-left: 112px;
+        
+        
+    }
+
+    .effet_1{
+        position: absolute;
+        margin-left: -16px;
+        top:1070px;
+        color: $primaire;
+        opacity: 0;
+        cursor: pointer;
+        
+    }
+
+    .effet_2{
+        position: absolute;
+        margin-left: -16px;
+        top:1340px;
+        color: $primaire;
+        opacity: 0;
+        cursor: pointer;
+        
+    }
+    .effet_3{
+        position: absolute;
+        margin-left: -16px;
+        top:1610px;
+        color: $primaire;
+        opacity: 0;
+        cursor: pointer;
+        
+    }
+    .effet_4{
+        position: absolute;
+        margin-left: -16px;
+        top:1880px;
+        color: $primaire;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    .nouveau_1{
+        position: absolute;
+        top: 885px;
+        left: 194px;
+        width: 81px;
+        height: 28px;
+        background-color: $tertiaire;
+        border-radius: 2px;
+        color: #008766;
+    }
+
+    .nouveau_2{
+        position: absolute;
+        top:1157px;
+        left: 194px;
+        width: 81px;
+        height: 28px;
+        background-color: $tertiaire;
+        border-radius: 2px;
+        color: #008766;
+
+    }
+}
+
+
+/* Annimation coeur */
+.effet_1:active{
+    animation-duration: 2s;
+        animation-name:remplire ;
+        
+}
+
+.effet_2:active{
+    animation-duration: 2s;
+        animation-name:remplire ;
+        
+}
+
+.effet_3:active{
+    animation-duration: 2s;
+        animation-name:remplire ;
+        
+}
+
+.effet_4:active{
+    animation-duration: 2s;
+        animation-name:remplire ;
+        
+}
+
+@keyframes remplire {
+    from{
+        opacity: 1;
+    }
+    
+
+}
+
+
+
+
+
+
+
+
+
