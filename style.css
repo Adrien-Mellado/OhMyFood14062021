@@ -362,14 +362,11 @@ footer #utensils {
 @keyframes chargement {
   100% {
     transform: translate(-50%, -50%) rotate(360deg);
-    visibility: hidden;
-    opacity: 0;
   }
 }
 @keyframes fin {
   100% {
     opacity: 0;
-    visibility: hidden;
   }
 }
 

@@ -98,6 +98,27 @@ footer #utensils {
   margin-right: auto;
   margin-bottom: 15px;
   border-radius: 20px;
+  opacity: 1;
+}
+#menu .anim1 {
+  animation: progresif;
+  transition-duration: 0.2s;
+  animation-duration: 3s;
+}
+#menu .anim2 {
+  animation: progresif;
+  transition-duration: 0.2s;
+  animation-duration: 3s;
+}
+#menu .anim3 {
+  animation: progresif;
+  transition-duration: 0.2s;
+  animation-duration: 3s;
+}
+#menu .anim4 {
+  animation: progresif;
+  transition-duration: 0.2s;
+  animation-duration: 3s;
 }
 #menu .bloc_menu2 {
   width: 285px;
@@ -139,6 +160,14 @@ footer #utensils {
   text-decoration: 3px underline #99e2d0;
 }
 
+@keyframes progresif {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 /* bouton principal*/
 .bouton_principal {
   height: 50px;

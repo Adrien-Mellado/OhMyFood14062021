@@ -35,6 +35,40 @@
         margin-right: auto;
         margin-bottom: 15px;
         border-radius: 20px;
+        opacity: 1;
+    }
+
+    .anim1{
+        animation: progresif;
+        transition-duration:0.2s ;
+        animation-duration: 3s;
+        
+        
+    }
+
+    .anim2{
+        animation: progresif;
+        transition-duration:0.2s ;
+        animation-duration: 3s;
+        
+        
+
+    }
+
+    .anim3{
+        animation: progresif;
+        transition-duration:0.2s ;
+        animation-duration: 3s;
+        
+        
+
+    }
+    .anim4{
+        animation: progresif;
+        transition-duration:0.2s ;
+        animation-duration: 3s;
+        
+        
     }
 
     .bloc_menu2{
@@ -87,4 +121,14 @@
         text-decoration: 3px underline  $tertiaire ;
     }
 
+}
+
+@keyframes progresif {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+    
 }
