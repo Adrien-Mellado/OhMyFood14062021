@@ -12,11 +12,31 @@ header .logo {
   margin-left: 80px;
   margin-top: 16px;
 }
+header .retour {
+  position: absolute;
+  left: 22px;
+  top: 20px;
+}
+header i {
+  font-size: 23px;
+}
+header a {
+  color: black;
+}
 
 /* General */
 body {
+  display: flex;
+  flex-direction: column;
   font-family: "Roboto", sans-serif;
   margin: 0px;
+}
+body .titre {
+  font-family: "Shrikhand", cursive;
+}
+
+#bloc_page {
+  height: 1365px;
 }
 
 /* Partie localisation */
@@ -150,6 +170,21 @@ body {
   background-color: #f5edff;
 }
 
+/* bouton commander */
+.bouton_commander {
+  height: 50px;
+  text-align: center;
+  border-radius: 20px;
+  background: linear-gradient(#ff79da, #9356dc);
+  border: 0px;
+  color: #fff;
+  font-size: 19px;
+  margin-top: 30px;
+  margin-left: 50%;
+  transform: translate(-50%);
+  width: 49%;
+}
+
 /* restaurants */
 #bloc_restaurant {
   width: 100%;
@@ -276,29 +311,27 @@ body {
     opacity: 1;
   }
 }
-#bloc_footer {
+footer {
+  margin-top: auto;
   width: 100%;
   height: 198px;
   background-color: #353535;
 }
-#bloc_footer ul {
+footer ul {
   color: #fff;
   list-style: none;
 }
-#bloc_footer li {
+footer li {
   margin-top: 5px;
 }
-#bloc_footer .logo_footer {
+footer .logo_footer {
   font-family: "Shrikhand", cursive;
   font-size: 20px;
   color: white;
   padding-top: 30px;
   padding-left: 30px;
 }
-#bloc_footer #utensils {
-  margin-right: 10px;
-}
-#bloc_footer #main {
+footer #utensils {
   margin-right: 10px;
 }
 

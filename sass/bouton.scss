@@ -120,4 +120,18 @@
 
 
 
-   
+   /* bouton commander */
+
+   .bouton_commander{
+    height: 50px ;
+    text-align: center;
+    border-radius: 20px;
+    background: linear-gradient($secondaire,$primaire) ;
+    border:0px;
+    color: #fff;
+    font-size: 19px;
+    margin-top: 30px;
+    margin-left: 50%;
+    transform: translate(-50% ) ;
+    width:49%;
+}

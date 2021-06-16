@@ -1,9 +1,22 @@
 
 /* General */
 
+
+
 body
 {
+    display: flex;
+    flex-direction: column;
     font-family: 'Roboto', sans-serif;
     margin:0px;
+
+    .titre{
+        font-family: 'Shrikhand', cursive;
+    }
+
+    
 }
 
+#bloc_page{
+    height: 1365px;
+}
