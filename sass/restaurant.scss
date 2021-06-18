@@ -42,73 +42,41 @@
         margin-top: 3px;
     }
 
-    .coeur_1{
-        margin-left: 123px;
-        
+    .coeur{
+        float: right;
+        margin-right: 10px;
+        font-size: 20px;
     }
 
-    .coeur_2{
-        margin-left: 153px;
-        position: relative;
-    }
-
-    .coeur_3{
-        margin-left: 148px;
-        
-    }
-
-    .coeur_4{
-        margin-left: 112px;
-        
-        
-    }
-
-    .effet_1{
-        position: absolute;
-        margin-left: -16px;
-        top:1070px;
-        color: $primaire;
-        opacity: 0;
+    .coeur_remplie{
+        float: right;
+        margin-right: -20px;
+        font-size: 20px;
         cursor: pointer;
-        
+        opacity: 0;
     }
 
-    .effet_2{
-        position: absolute;
-        margin-left: -16px;
-        top:1340px;
-        color: $primaire;
-        opacity: 0;
-        cursor: pointer;
-        
-    }
-    .effet_3{
-        position: absolute;
-        margin-left: -16px;
-        top:1610px;
-        color: $primaire;
-        opacity: 0;
-        cursor: pointer;
-        
-    }
-    .effet_4{
-        position: absolute;
-        margin-left: -16px;
-        top:1880px;
-        color: $primaire;
-        opacity: 0;
-        cursor: pointer;
+    .coeur_remplie:hover{
+        font-size: 20px;
+        animation-name: remplir_coeur;
+        animation-duration: 3s;
+        color: $secondaire;
     }
 
-    .nouveau_1{
-        position: absolute;
-        top: 885px;
-        left: 194px;
-        width: 81px;
-        height: 28px;
-        background-color: $tertiaire;
-        border-radius: 2px;
-        color: #008766;
+    .nouveau{
+        align-self: flex-start;
+    margin-left: -99px;
+    margin-top: 20px;
+    color: #39a98d;
+    font-weight: bold;
+    background-color :$tertiaire;
+    padding: 6px 13px;
+    border-radius: 2px;
+    }
+
+    .image_restaurant{
+        display: flex;
+        
     }
 
     .nouveau_2{
@@ -125,37 +93,18 @@
 }
 
 
+
+
+
 /* Annimation coeur */
-.effet_1:active{
-    animation-duration: 2s;
-        animation-name:remplire ;
-        
-}
 
-.effet_2:active{
-    animation-duration: 2s;
-        animation-name:remplire ;
-        
-}
-
-.effet_3:active{
-    animation-duration: 2s;
-        animation-name:remplire ;
-        
-}
-
-.effet_4:active{
-    animation-duration: 2s;
-        animation-name:remplire ;
-        
-}
-
-@keyframes remplire {
-    from{
+@keyframes remplir_coeur {
+    0%{
+        opacity: 0;
+    }
+    100%{
         opacity: 1;
     }
-    
-
 }
 
 

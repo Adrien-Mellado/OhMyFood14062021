@@ -39,6 +39,12 @@ body .titre {
   height: 1365px;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
 footer {
   margin-top: auto;
   width: 100%;
@@ -78,18 +84,25 @@ footer #utensils {
   border-radius: 28px 28px 0px 0px;
 }
 #menu #entre {
+  display: flex;
+  flex-direction: column;
   width: 100%;
 }
 #menu #plat {
+  display: flex;
+  flex-direction: column;
   width: 100%;
 }
 #menu #dessert {
+  display: flex;
+  flex-direction: column;
   width: 100%;
 }
 #menu h2 {
   padding-left: 20px;
 }
-#menu .bloc_menu1 {
+#menu .bloc_menu {
+  display: flex;
   width: 285px;
   height: 68px;
   background-color: #fff;
@@ -98,66 +111,81 @@ footer #utensils {
   margin-right: auto;
   margin-bottom: 15px;
   border-radius: 20px;
-  opacity: 1;
+  opacity: 0;
 }
 #menu .anim1 {
   animation: progresif;
   transition-duration: 0.2s;
+  animation-delay: 1s;
   animation-duration: 3s;
+  animation-fill-mode: both;
 }
 #menu .anim2 {
   animation: progresif;
   transition-duration: 0.2s;
   animation-duration: 3s;
+  animation-delay: 2s;
+  animation-fill-mode: both;
 }
 #menu .anim3 {
   animation: progresif;
   transition-duration: 0.2s;
   animation-duration: 3s;
+  animation-delay: 3s;
+  animation-fill-mode: both;
 }
 #menu .anim4 {
   animation: progresif;
   transition-duration: 0.2s;
   animation-duration: 3s;
-}
-#menu .bloc_menu2 {
-  width: 285px;
-  height: 89px;
-  background-color: #fff;
-  box-shadow: 1px 2px 3px grey;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 15px;
-  border-radius: 20px;
-}
-#menu .bloc_menu4 {
-  width: 285px;
-  height: 89px;
-  background-color: #fff;
-  box-shadow: 1px 2px 3px grey;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 15px;
-  border-radius: 20px;
+  animation-fill-mode: both;
 }
 #menu h3 {
   padding-left: 13px;
-  padding-top: 10px;
   margin-bottom: 0px;
   font-size: 16px;
+  height: 20px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  text-overflow: "...";
 }
 #menu p {
   padding-left: 13px;
   margin-top: 5px;
   font-size: 12px;
 }
-#menu .prix {
-  float: right;
-  font-weight: bold;
-  margin-right: 10px;
-}
 #menu .titre_menu {
   text-decoration: 3px underline #99e2d0;
+}
+#menu .prix {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin-left: 97px;
+}
+#menu .acompagnement {
+  height: 20px;
+  font-weight: 200;
+  font-size: 14px;
+  margin: 0;
+  white-space: wrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+#menu .valide {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin-right: auto;
+  opacity: 0;
+}
+#menu .valide:hover {
+  opacity: 1;
+  padding-left: 20px;
+  background-color: #99e2d0;
+  border-radius: 0px 20px 20px 0px;
+  cursor: pointer;
 }
 
 @keyframes progresif {
@@ -178,92 +206,6 @@ footer #utensils {
   color: #fff;
   font-size: 19px;
   margin-top: 10px;
-}
-
-/*bout secondaire*/
-#bouton_fonctionnement {
-  width: 100%;
-  height: 365px;
-  display: flex;
-  flex-direction: column;
-}
-#bouton_fonctionnement h2 {
-  margin-left: 30px;
-}
-#bouton_fonctionnement .bouton_secondaire {
-  width: 279px;
-  height: 62px;
-  font-weight: bolder;
-  text-align: center;
-  font-size: 15px;
-  padding-left: 36px;
-  border-radius: 18px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 15px;
-  border: 0px;
-  box-shadow: 0px 2px 10px grey;
-}
-#bouton_fonctionnement .numero_1 {
-  position: absolute;
-  top: 485px;
-  left: 9px;
-  text-align: center;
-  background-color: #9356dc;
-  border-radius: 360px;
-  width: 20px;
-  height: 20px;
-  color: #fff;
-  padding: 4px;
-}
-#bouton_fonctionnement .numero_2 {
-  position: absolute;
-  top: 562px;
-  left: 9px;
-  text-align: center;
-  background-color: #9356dc;
-  border-radius: 360px;
-  width: 20px;
-  height: 20px;
-  color: #fff;
-  padding: 4px;
-}
-#bouton_fonctionnement .numero_3 {
-  position: absolute;
-  top: 641px;
-  left: 9px;
-  text-align: center;
-  background-color: #9356dc;
-  border-radius: 360px;
-  width: 20px;
-  height: 20px;
-  color: #fff;
-  padding: 4px;
-}
-#bouton_fonctionnement #icone_mobil {
-  position: absolute;
-  top: 506px;
-  left: 57px;
-  color: grey;
-}
-#bouton_fonctionnement #icone_liste {
-  position: absolute;
-  top: 582px;
-  left: 57px;
-  color: grey;
-}
-#bouton_fonctionnement #icone_shop {
-  position: absolute;
-  top: 660px;
-  left: 57px;
-  color: grey;
-}
-#bouton_fonctionnement i:hover {
-  color: #9356dc;
-}
-
-.bouton_secondaire:hover {
-  background-color: #f5edff;
 }
 
 /* bouton commander */

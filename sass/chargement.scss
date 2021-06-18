@@ -1,6 +1,6 @@
 @import "couleur.scss";
 
-#bloc_chargement
+.bloc_chargement
 {
     position: fixed;
     top: 0px;
@@ -13,7 +13,7 @@
     animation: fin 3s linear  ;
     
 
-    #chargement{
+    .chargement{
        width: 120px;
        height: 120px;
        border:16px solid $tertiaire;
@@ -23,11 +23,15 @@
         top:50%;
         left:50%;
         transform: translate(-50% , -50%) rotate(0deg);
-        animation: chargement 1s linear infinite ;
-        
+        animation: chargement 1s linear ;
+        transition-duration: 0.5s;
     }
    
     
+}
+
+.fin {
+    animation: fin 3s ease-out both ;
 }
 
 @keyframes chargement{
@@ -39,7 +43,8 @@
 
 @keyframes fin {
     100%{
-        opacity: 0;  
+        opacity: 0; 
+         z-index: -3;
     }
    
 }

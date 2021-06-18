@@ -39,6 +39,12 @@ body .titre {
   height: 1365px;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
 /* Partie localisation */
 #localisation {
   width: 100%;
@@ -82,92 +88,6 @@ body .titre {
   color: #fff;
   font-size: 19px;
   margin-top: 10px;
-}
-
-/*bout secondaire*/
-#bouton_fonctionnement {
-  width: 100%;
-  height: 365px;
-  display: flex;
-  flex-direction: column;
-}
-#bouton_fonctionnement h2 {
-  margin-left: 30px;
-}
-#bouton_fonctionnement .bouton_secondaire {
-  width: 279px;
-  height: 62px;
-  font-weight: bolder;
-  text-align: center;
-  font-size: 15px;
-  padding-left: 36px;
-  border-radius: 18px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 15px;
-  border: 0px;
-  box-shadow: 0px 2px 10px grey;
-}
-#bouton_fonctionnement .numero_1 {
-  position: absolute;
-  top: 485px;
-  left: 9px;
-  text-align: center;
-  background-color: #9356dc;
-  border-radius: 360px;
-  width: 20px;
-  height: 20px;
-  color: #fff;
-  padding: 4px;
-}
-#bouton_fonctionnement .numero_2 {
-  position: absolute;
-  top: 562px;
-  left: 9px;
-  text-align: center;
-  background-color: #9356dc;
-  border-radius: 360px;
-  width: 20px;
-  height: 20px;
-  color: #fff;
-  padding: 4px;
-}
-#bouton_fonctionnement .numero_3 {
-  position: absolute;
-  top: 641px;
-  left: 9px;
-  text-align: center;
-  background-color: #9356dc;
-  border-radius: 360px;
-  width: 20px;
-  height: 20px;
-  color: #fff;
-  padding: 4px;
-}
-#bouton_fonctionnement #icone_mobil {
-  position: absolute;
-  top: 506px;
-  left: 57px;
-  color: grey;
-}
-#bouton_fonctionnement #icone_liste {
-  position: absolute;
-  top: 582px;
-  left: 57px;
-  color: grey;
-}
-#bouton_fonctionnement #icone_shop {
-  position: absolute;
-  top: 660px;
-  left: 57px;
-  color: grey;
-}
-#bouton_fonctionnement i:hover {
-  color: #9356dc;
-}
-
-.bouton_secondaire:hover {
-  background-color: #f5edff;
 }
 
 /* bouton commander */
@@ -219,60 +139,36 @@ body .titre {
   padding-left: 10px;
   margin-top: 3px;
 }
-#bloc_restaurant .coeur_1 {
-  margin-left: 123px;
+#bloc_restaurant .coeur {
+  float: right;
+  margin-right: 10px;
+  font-size: 20px;
 }
-#bloc_restaurant .coeur_2 {
-  margin-left: 153px;
-  position: relative;
-}
-#bloc_restaurant .coeur_3 {
-  margin-left: 148px;
-}
-#bloc_restaurant .coeur_4 {
-  margin-left: 112px;
-}
-#bloc_restaurant .effet_1 {
-  position: absolute;
-  margin-left: -16px;
-  top: 1070px;
-  color: #9356dc;
-  opacity: 0;
+#bloc_restaurant .coeur_remplie {
+  float: right;
+  margin-right: -20px;
+  font-size: 20px;
   cursor: pointer;
-}
-#bloc_restaurant .effet_2 {
-  position: absolute;
-  margin-left: -16px;
-  top: 1340px;
-  color: #9356dc;
   opacity: 0;
-  cursor: pointer;
 }
-#bloc_restaurant .effet_3 {
-  position: absolute;
-  margin-left: -16px;
-  top: 1610px;
-  color: #9356dc;
-  opacity: 0;
-  cursor: pointer;
+#bloc_restaurant .coeur_remplie:hover {
+  font-size: 20px;
+  animation-name: remplir_coeur;
+  animation-duration: 3s;
+  color: #ff79da;
 }
-#bloc_restaurant .effet_4 {
-  position: absolute;
-  margin-left: -16px;
-  top: 1880px;
-  color: #9356dc;
-  opacity: 0;
-  cursor: pointer;
-}
-#bloc_restaurant .nouveau_1 {
-  position: absolute;
-  top: 885px;
-  left: 194px;
-  width: 81px;
-  height: 28px;
+#bloc_restaurant .nouveau {
+  align-self: flex-start;
+  margin-left: -99px;
+  margin-top: 20px;
+  color: #39a98d;
+  font-weight: bold;
   background-color: #99e2d0;
+  padding: 6px 13px;
   border-radius: 2px;
-  color: #008766;
+}
+#bloc_restaurant .image_restaurant {
+  display: flex;
 }
 #bloc_restaurant .nouveau_2 {
   position: absolute;
@@ -286,28 +182,11 @@ body .titre {
 }
 
 /* Annimation coeur */
-.effet_1:active {
-  animation-duration: 2s;
-  animation-name: remplire;
-}
-
-.effet_2:active {
-  animation-duration: 2s;
-  animation-name: remplire;
-}
-
-.effet_3:active {
-  animation-duration: 2s;
-  animation-name: remplire;
-}
-
-.effet_4:active {
-  animation-duration: 2s;
-  animation-name: remplire;
-}
-
-@keyframes remplire {
-  from {
+@keyframes remplir_coeur {
+  0% {
+    opacity: 0;
+  }
+  100% {
     opacity: 1;
   }
 }
@@ -335,7 +214,7 @@ footer #utensils {
   margin-right: 10px;
 }
 
-#bloc_chargement {
+.bloc_chargement {
   position: fixed;
   top: 0px;
   left: 0px;
@@ -346,7 +225,7 @@ footer #utensils {
   transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
   animation: fin 3s linear;
 }
-#bloc_chargement #chargement {
+.bloc_chargement .chargement {
   width: 120px;
   height: 120px;
   border: 16px solid #99e2d0;
@@ -356,7 +235,12 @@ footer #utensils {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(0deg);
-  animation: chargement 1s linear infinite;
+  animation: chargement 1s linear;
+  transition-duration: 0.5s;
+}
+
+.fin {
+  animation: fin 3s ease-out both;
 }
 
 @keyframes chargement {
@@ -367,7 +251,71 @@ footer #utensils {
 @keyframes fin {
   100% {
     opacity: 0;
+    z-index: -3;
   }
+}
+#bloc_fonctionnement {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#bloc_fonctionnement .numero {
+  background-color: #9356DC;
+  border-radius: 20px;
+  color: white;
+  text-align: center;
+  padding: 5px 10px;
+  margin-left: -65px;
+  margin-right: 20px;
+}
+#bloc_fonctionnement #choix_restaurant {
+  padding: 17px 50px;
+  border-radius: 19px;
+  background-color: #f6f6f6;
+  box-shadow: 0px 3px 8px #cfcfcf;
+  margin-bottom: 15px;
+  margin-left: 15px;
+}
+#bloc_fonctionnement #choix_menu {
+  padding: 17px 50px;
+  border-radius: 19px;
+  background-color: #f6f6f6;
+  box-shadow: 0px 3px 8px #cfcfcf;
+  margin-bottom: 15px;
+  margin-left: 15px;
+}
+#bloc_fonctionnement #deguste {
+  padding: 17px 50px;
+  border-radius: 19px;
+  background-color: #f6f6f6;
+  box-shadow: 0px 3px 8px #cfcfcf;
+  margin-bottom: 15px;
+  margin-left: 15px;
+}
+#bloc_fonctionnement #icone_shop {
+  margin-right: 13px;
+}
+#bloc_fonctionnement #icone_liste {
+  margin-right: 15px;
+}
+
+#icone_mobil:hover {
+  color: #9356dc;
+}
+
+#icone_shop:hover {
+  color: #9356dc;
+}
+
+#icone_liste:hover {
+  color: #9356dc;
+}
+
+/* bouton fonctionnement */
+.bouton_fontionnement {
+  border: none;
+  background-color: #f6f6f6;
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=style.css.map */

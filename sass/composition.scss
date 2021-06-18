@@ -11,14 +11,20 @@
     border-radius: 28px 28px 0px 0px;
     
     #entre{
+        display: flex;
+        flex-direction: column;
         width: 100%;
     }
 
     #plat{
+        display: flex;
+        flex-direction: column;
         width: 100%;
     }
 
     #dessert{
+        display: flex;
+        flex-direction: column;
         width: 100%;
     }
 
@@ -26,7 +32,8 @@
         padding-left: 20px;
     }
 
-    .bloc_menu1{
+    .bloc_menu{
+        display: flex;
         width: 285px;
         height: 68px;
         background-color: #fff;
@@ -35,22 +42,26 @@
         margin-right: auto;
         margin-bottom: 15px;
         border-radius: 20px;
-        opacity: 1;
+        opacity: 0;
+        
     }
 
     .anim1{
-        animation: progresif;
+        animation: progresif ;
         transition-duration:0.2s ;
-        animation-duration: 3s;
-        
-        
+        animation-delay: 1s;
+        animation-duration: 3s; 
+        animation-fill-mode: both;
+      
     }
 
     .anim2{
-        animation: progresif;
+        animation: progresif  ;
         transition-duration:0.2s ;
-        animation-duration: 3s;
-        
+        animation-duration: 3s; 
+        animation-delay: 2s;
+        animation-fill-mode: both;
+
         
 
     }
@@ -59,6 +70,10 @@
         animation: progresif;
         transition-duration:0.2s ;
         animation-duration: 3s;
+        animation-delay: 3s;
+        animation-fill-mode: both;
+
+       
         
         
 
@@ -67,53 +82,29 @@
         animation: progresif;
         transition-duration:0.2s ;
         animation-duration: 3s;
-        
-        
-    }
-
-    .bloc_menu2{
-        width: 285px;
-        height: 89px;
-        background-color: #fff;
-        box-shadow: 1px 2px 3px grey;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 15px;
-        border-radius: 20px;
+        animation-fill-mode: both;
     }
 
     
 
-    .bloc_menu4{
-        width: 285px;
-        height: 89px;
-        background-color: #fff;
-        box-shadow: 1px 2px 3px grey;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 15px;
-        border-radius: 20px;
-    }
-
     h3{
         padding-left: 13px;
-        padding-top: 10px;
         margin-bottom: 0px;
         font-size: 16px;
+        height: 20px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        text-overflow: "...";
+
     }
 
     p{
         padding-left: 13px;
         margin-top: 5px;
         font-size: 12px;
+         
     }
 
-    .prix{
-       float: right;
-        font-weight: bold;
-        margin-right: 10px;
-
-    }
     
 
     .titre_menu{
@@ -121,14 +112,72 @@
         text-decoration: 3px underline  $tertiaire ;
     }
 
+    
+  
+   
+    
+    
+   .prix{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-left: 97px;
+   }
+
+
+   .acompagnement{
+       
+       height: 20px;
+        font-weight: 200;
+        font-size: 14px;
+        margin: 0;
+        white-space: wrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        
+        
+        
+    }
+
+
+   .valide{
+       display: flex;
+       flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        margin-right: auto;
+        opacity: 0;
+        
+   }
+
+   .valide:hover{
+       opacity: 1;
+       padding-left: 20px;
+       background-color: $tertiaire;
+       border-radius: 0px 20px 20px 0px;
+       cursor: pointer;
+       
+   }
 }
+
+
+
+
+
+
+
+
 
 @keyframes progresif {
     0%{
+        
         opacity: 0;
+        
+         
+        
     }
     100%{
         opacity: 1;
     }
-    
 }
+

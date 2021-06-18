@@ -1,0 +1,83 @@
+
+#bloc_fonctionnement{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .numero {
+        background-color: #9356DC;
+        border-radius: 20px;
+        color: white;
+        text-align: center;
+        padding: 5px 10px;
+        margin-left: -65px;
+        margin-right: 20px;
+    }
+
+    #choix_restaurant{
+        padding: 17px 50px;
+        border-radius: 19px;
+        background-color:#f6f6f6;
+        box-shadow: 0px 3px 8px rgb(207 207 207);
+        margin-bottom: 15px;
+        margin-left: 15px;
+       
+    }
+
+    #choix_menu{
+        padding: 17px 50px;
+        border-radius: 19px;
+        background-color:#f6f6f6;
+        box-shadow: 0px 3px 8px rgb(207 207 207);
+        margin-bottom: 15px;
+        margin-left: 15px;
+       
+    }
+
+
+    #deguste{
+        padding: 17px 50px;
+        border-radius: 19px;
+        background-color:#f6f6f6;
+        box-shadow: 0px 3px 8px rgb(207 207 207);
+        margin-bottom: 15px;
+        margin-left: 15px;
+       
+    }
+
+    #icone_mobil{
+       
+    }
+
+    #icone_shop{
+        margin-right:13px ;
+        
+    }
+    #icone_liste{
+        margin-right:15px ;
+        
+    }
+    
+}
+
+#icone_mobil:hover{
+    color: $primaire;
+}
+
+#icone_shop:hover{
+    color: $primaire;
+}
+
+#icone_liste:hover{
+    color: $primaire;
+}
+
+
+
+/* bouton fonctionnement */
+
+.bouton_fontionnement{
+    border: none;
+    background-color: #f6f6f6;
+    font-weight:bold ;
+}
