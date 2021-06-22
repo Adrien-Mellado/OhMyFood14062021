@@ -1,6 +1,5 @@
 @import "couleur.scss";
-
-
+@import "responsive.scss";
 
 #menu{
     position: absolute;
@@ -230,3 +229,21 @@ i.far.fa-check-circle {
     }
 }
 
+ @media screen and (min-width:$tablet_min) and (max-width:$tablet_max)  {
+    body{
+        color: red;
+    }
+}
+
+@media screen and (min-width:$destop_min) and (max-width:$destop_max)  {
+    body{
+        color: blue;
+    }
+}
+
+
+@media screen and (min-width:$tv_min) and (max-width:$tv_max)  {
+    body{
+        color: violet;
+    }
+}
