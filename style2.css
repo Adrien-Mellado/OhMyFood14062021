@@ -76,6 +76,9 @@ footer .logo_footer {
 footer #utensils {
   margin-right: 10px;
 }
+footer #main {
+  margin-right: 4px;
+}
 
 .image_menu {
   width: 100%;
@@ -118,9 +121,7 @@ footer #utensils {
   height: 68px;
   background-color: #fff;
   box-shadow: 1px 2px 3px grey;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 15px;
+  margin: 0 auto 15px auto;
   border-radius: 20px;
   opacity: 0;
   cursor: pointer;
@@ -186,11 +187,13 @@ footer #utensils {
 }
 #menu .prix {
   display: flex;
-  align-items: flex-end;
   width: 16%;
   padding: 0px 5px;
   margin-right: 1%;
   font-weight: bold;
+  margin-top: 26px;
+  flex-direction: row;
+  align-items: center;
 }
 #menu .valide {
   visibility: hidden;
@@ -218,7 +221,7 @@ i.far.fa-check-circle {
 }
 
 .bloc_menu:hover .prix {
-  animation: valide ease 0.3s;
+  animation: valide ease 1s;
   animation-fill-mode: both;
 }
 
@@ -227,7 +230,7 @@ i.far.fa-check-circle {
     width: 0px;
   }
   100% {
-    width: 5%;
+    width: 15%;
   }
 }
 @keyframes turn {
@@ -281,86 +284,32 @@ i.far.fa-check-circle {
     margin-left: 0px;
   }
 }
-@media screen and (min-width: 1024px) and (max-width: 1444px) {
-  body {
-    color: blue;
-  }
-
+@media screen and (min-width: 1024px) and (max-width: 2560px) {
   #bloc_page {
-    height: 2700px;
+    height: 954px;
   }
 
   #menu {
+    height: 718px;
+  }
+  #menu .box_row {
     display: flex;
-    justify-content: center;
-    margin-top: -50px;
-    border-radius: 30px 30px 0 0;
-    background-color: #F6F6F6;
-    position: relative;
-    height: 1127px;
     flex-direction: row;
-    flex-wrap: wrap;
   }
   #menu .bloc_menu {
-    display: flex;
-    justify-content: space-between;
-    width: 95%;
-    height: 139px;
-    background-color: #fff;
-    box-shadow: 1px 2px 3px grey;
-    margin-left: 30px;
-    margin-right: auto;
-    margin-bottom: 37px;
-    border-radius: 20px;
-    opacity: 0;
-    margin-top: 37px;
-    cursor: pointer;
+    margin: 0 20px 0 20px;
   }
-  #menu #entre {
-    display: flex;
-    flex-direction: column;
-    width: 96%;
-    margin-top: 0px;
-    flex-wrap: nowrap;
-    /* margin-left: 20px; */
-  }
-  #menu #plat {
-    display: flex;
-    flex-direction: column;
-    width: 96%;
-    margin-top: 15px;
-    flex-wrap: nowrap;
-    /* margin-left: 20px; */
-  }
-  #menu #dessert {
-    display: flex;
-    flex-direction: column;
-    width: 96%;
-    align-items: flex-start;
-    margin-top: 15px;
-    flex-wrap: nowrap;
-    /* margin-left: 20px; */
-  }
-  #menu p {
-    padding-left: 13px;
-    margin-top: 5px;
-    font-size: 17px;
-  }
-  #menu h3 {
-    padding-left: 13px;
-    margin-bottom: 0px;
-    font-size: 17px;
-    height: 20px;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
+  #menu .box_menu {
+    margin-bottom: 30px;
   }
   #menu h2 {
-    padding-left: 20px;
-    font-size: 53px;
+    padding-left: 24px;
+    font-size: 30px;
   }
   #menu .titre_menu {
     text-decoration: 3px underline #99e2d0;
+    margin-left: 5px;
+    font-size: 20px;
   }
 
   @keyframes valide {
@@ -372,92 +321,111 @@ i.far.fa-check-circle {
     }
   }
 }
-@media screen and (min-width: 1444px) and (max-width: 2560px) {
-  body {
-    color: violet;
-  }
-
-  #menu {
-    display: flex;
-    justify-content: center;
-    margin-top: -50px;
-    border-radius: 30px 30px 0 0;
-    background-color: #F6F6F6;
-    position: relative;
-    height: 1127px;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  #menu .bloc_menu {
-    display: flex;
-    justify-content: space-between;
-    width: 95%;
-    height: 139px;
-    background-color: #fff;
-    box-shadow: 1px 2px 3px grey;
-    margin-left: 30px;
-    margin-right: auto;
-    margin-bottom: 37px;
-    border-radius: 20px;
-    opacity: 0;
-    margin-top: 37px;
-    cursor: pointer;
-  }
-  #menu #entre {
-    display: flex;
-    flex-direction: row;
-    width: 96%;
-    align-items: center;
-    margin-top: 0px;
-    flex-wrap: nowrap;
-    /* margin-left: 20px; */
-  }
-  #menu #plat {
-    display: flex;
-    flex-direction: row;
-    width: 96%;
-    align-items: center;
-    margin-top: 15px;
-    flex-wrap: nowrap;
-    /* margin-left: 20px; */
-  }
-  #menu #dessert {
-    display: flex;
-    flex-direction: row;
-    width: 96%;
-    align-items: center;
-    margin-top: 15px;
-    flex-wrap: nowrap;
-    /* margin-left: 20px; */
-  }
-  #menu p {
-    padding-left: 13px;
-    margin-top: 5px;
-    font-size: 20px;
-  }
-  #menu h3 {
-    padding-left: 13px;
-    margin-bottom: 0px;
-    font-size: 20px;
-    height: 25px;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-  }
-  #menu h2 {
-    padding-left: 20px;
-    font-size: 53px;
-  }
-
-  @keyframes valide {
-    0% {
-      width: 0px;
+/*@media screen and (min-width:$tv_min) and (max-width:$tv_max)  {
+    body{
+        color: violet;
     }
-    100% {
-      width: 20%;
+
+    #menu {
+        display: flex;
+        justify-content: center;
+        margin-top: -50px;
+        border-radius: 30px 30px 0 0;
+        background-color: #F6F6F6;
+        position: relative;
+        height: 1127px;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+     .bloc_menu {
+        display: flex;
+        justify-content: space-between;
+        width: 95%;
+        height: 139px;
+        background-color: #fff;
+        box-shadow: 1px 2px 3px grey;
+        margin-left: 30px;
+        margin-right: auto;
+        margin-bottom: 37px;
+        border-radius: 20px;
+        opacity: 0;
+        margin-top: 37px;
+        cursor: pointer;
+     }
+        #entre {
+            display: flex;
+            flex-direction: row;
+            width: 96%;
+            align-items: center;
+            margin-top: 0px;
+            flex-wrap: nowrap;
+             margin-left: 20px; 
+        }
+
+         #plat {
+            display: flex;
+            flex-direction: row;
+            width: 96%;
+            align-items: center;
+            margin-top: 15px;
+            flex-wrap: nowrap;
+             margin-left: 20px; 
+         }
+
+        #dessert {
+            display: flex;
+            flex-direction: row;
+            width: 96%;
+            align-items: center;
+            margin-top: 15px;
+            flex-wrap: nowrap;
+             margin-left: 20px; 
+        }
+
+         p {
+            padding-left: 13px;
+            margin-top: 5px;
+            font-size: 20px;
+        }
+
+         h3 {
+            padding-left: 13px;
+            margin-bottom: 0px;
+            font-size: 20px;
+            height: 25px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+
+         h2 {
+            padding-left: 20px;
+            font-size: 53px;
+        }
     }
-  }
-}
+
+
+    @keyframes valide {
+        0% {
+         transform: translate(-50px, 0);
+            width: 0px;
+        }
+
+         40% {
+           transform: translate(-25px, 0);
+         }
+
+         70% {
+           transform: translate(-12px, 0);
+         }
+
+        100% {
+          transform: translate(-1px, 0);
+            width: 20%;
+        }
+        }
+
+}*/
 /* bouton principal*/
 .bouton_principal {
   height: 50px;
@@ -483,6 +451,12 @@ i.far.fa-check-circle {
   margin-left: 50%;
   transform: translate(-50%);
   width: 49%;
+  box-shadow: 1px 3px 4px rgba(0, 0, 0, 0.637);
+}
+
+.bouton_commander:hover {
+  opacity: 0.9;
+  box-shadow: 1px 3px 4px black;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
@@ -500,7 +474,7 @@ i.far.fa-check-circle {
     width: 190%;
   }
 }
-@media screen and (min-width: 1024px) and (max-width: 1444px) {
+@media screen and (min-width: 1024px) and (max-width: 2560px) {
   .bouton_commander {
     height: 50px;
     text-align: center;
@@ -509,25 +483,10 @@ i.far.fa-check-circle {
     border: 0px;
     color: #fff;
     font-size: 19px;
-    margin-top: 30px;
+    margin-top: 81px;
     margin-left: 50%;
     transform: translate(-50%);
-    width: 190%;
-  }
-}
-@media screen and (min-width: 1444px) and (max-width: 2560px) {
-  .bouton_commander {
-    height: 76px;
-    text-align: center;
-    border-radius: 20px;
-    background: linear-gradient(#ff79da, #9356dc);
-    border: 0px;
-    color: #fff;
-    font-size: 19px;
-    margin-top: 30px;
-    margin-left: 50%;
-    transform: translate(-50%);
-    width: 300%;
+    width: 34%;
   }
 }
 
