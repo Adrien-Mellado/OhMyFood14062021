@@ -29,4 +29,14 @@ footer{
     #main{
         margin-right: 4px;
     }
+
+    .contacte{
+        color: white;
+        display: flex;
+        justify-content: flex-start;
+
+        &:hover{
+            color: $primaire;
+        }
+    }
 }

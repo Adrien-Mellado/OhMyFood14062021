@@ -19,7 +19,7 @@
 
     <header>
         <div id="bloc_image">
-            <h1>ohmyfood</h1>
+            <h1 class="titre principal" > ohmyfood</h1>
         </div>
     </header>
 
@@ -46,26 +46,30 @@
 
     </section>
 
+    
+
     <section id="bloc_fonctionnement">
 
         <h2 class="titre">Fonctionnement</h2>
 
-        <div id="choix_restaurant">
-            <span class="numero">1</span>
-            <span id="icone_mobil"><i class="fas fa-mobile-alt"></i></span>
-            <input class="bouton_fontionnement" type="button" value="Choisissez un restaurants">
-        </div>  
+        <div class="box_fonctionnement">
+            <div id="choix_restaurant">
+                <span class="numero">1</span>
+                <span id="icone_mobil"><i class="fas fa-mobile-alt"></i></span>
+                <input class="bouton_fontionnement" type="button" value="Choisissez un restaurants">
+            </div>  
   
-        <div id="choix_menu">
-            <span class="numero">2</span>
-            <span id="icone_liste"><i class="fas fa-list"></i></span>
-            <input class="bouton_fontionnement"  type="button" value="Composez votre menu" >
-        </div>
+            <div id="choix_menu">
+                <span class="numero">2</span>
+                <span id="icone_liste"><i class="fas fa-list"></i></span>
+                <input class="bouton_fontionnement"  type="button" value="Composez votre menu" >
+            </div>
 
-        <div id="deguste">
-            <span class="numero">3</span>
-            <span id="icone_shop"><i class="fas fa-store"></i></span>
-            <input class="bouton_fontionnement" type="button" value="Dégustez au restaurant">
+            <div id="deguste">
+                <span class="numero">3</span>
+                <span id="icone_shop"><i class="fas fa-store"></i></span>
+                <input class="bouton_fontionnement" type="button" value="Dégustez au restaurant">
+            </div>
         </div>
 
     </section>
@@ -75,6 +79,7 @@
         
         <h2 class="titre"> Restaurants</h2>
 
+        <div class="box_restaurant">
         <a href="gout.html">
             <div class="bloc_image">
 
@@ -151,7 +156,7 @@
 
             </div>
         </a>
-
+    </div>
     </section>
 
 
@@ -162,7 +167,7 @@
                 <li> <span id="utensils" ><i class="fas fa-utensils"></i></span>Proposer un restaurant</li>
                 <li> <span id="main" ><i class="fas fa-hands-helping"></i></span>Devenir partenaire</li>
                 <li>Mentions légales</li>
-                <li>Contact</li>
+                <a class="contacte" href="mailto:ohmyfood@hotmail.fr"><li>Contact</li></a>
             </ul>
         </div>
     </footer>

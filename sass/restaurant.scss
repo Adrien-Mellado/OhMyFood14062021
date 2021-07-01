@@ -3,10 +3,9 @@
 /* restaurants */
 
 #bloc_restaurant{
-    width: 100%;
+    // width: 100%;
     height: 1183px;
     background-color: #f6f6f6;
-
 
     h2{
         padding-top: 27px;
@@ -14,18 +13,18 @@
     }
 
     .bloc_image{
-        width: 271px ;
+        // width:89% ;
         height:250px ;
         
-        margin-left: auto;
-        margin-right: auto;
+        // margin-left: auto;
+        // margin-right: auto;
         margin-top: 20px;
         border-radius: 15px;
         box-shadow: 1px 2px 12px grey;
     }
 
     .image{
-        width: 271px;
+        width: 100%;
         height: 176px;
         object-fit: cover;
         border-radius: 15px 15px 0px 0px;
@@ -90,8 +89,13 @@
         color: #008766;
 
     }
-}
 
+    .box_restaurant{
+        width: 69%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
 
 
 
@@ -108,6 +112,43 @@
 }
 
 
+
+@media screen and (min-width:$tablet_min) and (max-width:$tv_max)  {
+
+    
+
+
+    #bloc_restaurant{
+
+        .box_restaurant{
+            width: 100%;
+            display: flex;
+
+
+            .bloc_image{
+                width:90%;
+            }
+        }
+    }
+    
+
+    a {
+        text-decoration: none;
+        color: black;
+        cursor: pointer;
+        width: 25%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    #bloc_restaurant {
+        height: 500px;
+        background-color: #f6f6f6;
+    }
+
+    
+    
+}
 
 
 
