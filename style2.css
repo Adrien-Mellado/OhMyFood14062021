@@ -299,7 +299,7 @@ i.far.fa-check-circle {
   #menu .box_row {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
   }
   #menu .bloc_menu {
     margin: 11px 20px 0 20px;
