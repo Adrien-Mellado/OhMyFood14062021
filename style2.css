@@ -255,10 +255,6 @@ i.far.fa-check-circle {
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-  body {
-    color: red;
-  }
-
   #menu {
     display: flex;
     margin-top: -50px;
