@@ -122,6 +122,9 @@ footer .contacte:hover {
 #menu h2 {
   padding-left: 20px;
 }
+#menu h2 i {
+  margin-left: 20px;
+}
 #menu .bloc_menu {
   display: flex;
   justify-content: space-between;
@@ -137,6 +140,17 @@ footer .contacte:hover {
 #menu .bloc_menu:hover .valide {
   visibility: visible;
   animation: valide both 0.3s;
+  background-color: #99e2d0;
+  border-radius: 0px 20px 20px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #99e2d0;
+  border-radius: 0px 20px 20px 0px;
+}
+#menu .bloc_menu:not(:hover) .valide {
+  visibility: visible;
+  animation: novalide both 0.3s;
   background-color: #99e2d0;
   border-radius: 0px 20px 20px 0px;
   display: flex;
@@ -167,12 +181,6 @@ footer .contacte:hover {
   transition-duration: 0.2s;
   animation-duration: 3s;
   animation-delay: 3s;
-  animation-fill-mode: both;
-}
-#menu .delai4 {
-  animation: progresif;
-  transition-duration: 0.2s;
-  animation-duration: 3s;
   animation-fill-mode: both;
 }
 #menu h3 {
@@ -221,6 +229,14 @@ footer .contacte:hover {
   overflow: hidden;
 }
 
+.delai4 {
+  animation: progresif;
+  transition-duration: 0.2s;
+  animation-duration: 3s;
+  animation-delay: 3s;
+  animation-fill-mode: both;
+}
+
 i.far.fa-check-circle {
   display: flex;
   flex-direction: row;
@@ -230,9 +246,21 @@ i.far.fa-check-circle {
 
 .bloc_menu:hover .prix {
   animation: valide ease 1s;
-  animation-fill-mode: both;
 }
 
+.bloc_menu:not(:hover).prix {
+  animation: novalide ease 1s;
+}
+
+@keyframes novalide {
+  0% {
+    width: 15%;
+  }
+  100% {
+    width: 1px;
+    visibility: hidden;
+  }
+}
 @keyframes valide {
   0% {
     width: 0px;

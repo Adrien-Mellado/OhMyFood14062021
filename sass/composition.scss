@@ -31,6 +31,10 @@
 
     h2{
         padding-left: 20px;
+
+        i{
+            margin-left: 20px;
+        }
     }
 
     .bloc_menu{
@@ -52,6 +56,7 @@
         &:hover .valide {
             visibility: visible;
             animation: valide both 0.3s;
+            
             background-color: $tertiaire;
             border-radius: 0px 20px 20px 0px; 
             display: flex;
@@ -60,6 +65,22 @@
             background-color: $tertiaire;
             border-radius: 0px 20px 20px 0px;
             // animation-fill-mode: both;
+            
+    
+        } 
+        &:not(:hover) .valide {
+            visibility:visible;
+            animation: novalide both 0.3s;
+            background-color: $tertiaire;
+            border-radius: 0px 20px 20px 0px; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color: $tertiaire;
+            border-radius: 0px 20px 20px 0px;
+            // animation-fill-mode: both;
+            
+    
         } 
 
         &:hover i.far.fa-check-circle{
@@ -99,13 +120,7 @@
         
 
     }
-    .delai4{
-        animation: progresif;
-        transition-duration:0.2s ;
-        animation-duration: 3s;
-        animation-fill-mode: both;
-    }
-
+    
     
 
     h3{
@@ -175,6 +190,15 @@
 
 }
 
+.delai4{
+    animation: progresif;
+    transition-duration:0.2s ;
+    animation-duration: 3s;
+    animation-delay: 3s;
+    animation-fill-mode: both;
+}
+
+
 
 i.far.fa-check-circle {
     display: flex;
@@ -184,13 +208,32 @@ i.far.fa-check-circle {
 }
 
 .bloc_menu:hover .prix  {
-    animation: valide ease 1s;
-    animation-fill-mode: both;
-    
+    animation: valide ease 1s ;
+        
 }
 
+.bloc_menu:not(:hover).prix  {
+    animation: novalide ease 1s ;
+        
+}
 
-
+@keyframes novalide {
+    0% {
+    //   transform: translate(-50px, 0);
+        width: 15%;
+        
+    }
+  
+   
+  
+    100% {
+    //   transform: translate(-1px, 0);
+        width: 1px;
+        visibility: hidden;
+    
+    }
+      
+}
 
 @keyframes valide {
     0% {
@@ -203,8 +246,11 @@ i.far.fa-check-circle {
     100% {
     //   transform: translate(-1px, 0);
         width: 15%;
+        
+    
     }
-    }
+      
+}
   
 
     
