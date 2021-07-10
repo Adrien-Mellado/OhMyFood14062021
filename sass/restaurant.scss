@@ -58,9 +58,12 @@
     .coeur_remplie:hover{
         font-size: 20px;
         animation-name: remplir_coeur;
-        animation-duration: 3s;
+        animation-duration: 3s ;
+        animation-fill-mode: forwards;
         color: $secondaire;
     }
+
+   
 
     .nouveau{
         align-self: flex-start;
@@ -105,9 +108,11 @@
 @keyframes remplir_coeur {
     0%{
         opacity: 0;
+        
     }
     100%{
         opacity: 1;
+        
     }
 }
 
