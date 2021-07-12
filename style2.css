@@ -119,12 +119,6 @@ footer .contacte:hover {
   flex-direction: column;
   width: 100%;
 }
-#menu h2 {
-  padding-left: 20px;
-}
-#menu h2 i {
-  margin-left: 20px;
-}
 #menu .bloc_menu {
   display: flex;
   justify-content: space-between;
@@ -252,6 +246,26 @@ i.far.fa-check-circle {
   animation: novalide ease 1s;
 }
 
+.coeur {
+  margin-right: -26px;
+  font-size: 20px;
+}
+
+.coeur_remplie {
+  margin-right: -20px;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.coeur_remplie:hover {
+  font-size: 20px;
+  animation-name: remplir_coeur;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  color: #ff79da;
+}
+
 @keyframes novalide {
   0% {
     width: 15%;
@@ -275,6 +289,14 @@ i.far.fa-check-circle {
   }
 }
 @keyframes progresif {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes remplir_coeur {
   0% {
     opacity: 0;
   }
